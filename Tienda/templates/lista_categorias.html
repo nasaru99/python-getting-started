@@ -2,11 +2,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% if user.is_authenticated %}
+{% comment %} {% if user.is_authenticated %}
   Hola, {{ user.username }}! <a href="{% url 'logout' %}">Cerrar sesión</a>
 {% else %}
   <a href="{% url 'login' %}">Iniciar sesión</a>
-{% endif %}
+{% endif %} {% endcomment %}
 <h1>Categorías</h1>
 <ul>
 {% for categoria in categorias %}
